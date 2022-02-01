@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labchild/note-taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/labchild/note-taker/issues"
+  },
+  "homepage": "https://github.com/labchild/note-taker#readme"
 }
