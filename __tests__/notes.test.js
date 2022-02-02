@@ -83,4 +83,4 @@ test('checks delete function removes one note', () => {
     const result = deleteNote("123", notesList);
 
     expect(result.length).toBeLessThan(oldNotesArrayLength);
-})
+});
