@@ -31,11 +31,24 @@ router.post('/', (req, res) => {
     if (result) {
         res.json(result);
     } else {
-        res.status(404).json({ message: 'Request formatted incorrectly' });
+        res.status(400).json({ message: 'Request formatted incorrectly' });
     }
 });
 
 // update an existing note
+router.put('/:id', (req, res) => {
+    const result = updateNote(req.body, notes);
 
+    if (result) {
+        res.json(result);
+    } else {
+        res.status(400).json({ message: 'Request formatted incorrectly' });
+    }
+});
+
+// delete a note
+router.delete('/:id', (req, res) => {
+    
+})
 
 module.exports = router;
