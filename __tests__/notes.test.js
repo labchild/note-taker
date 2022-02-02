@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { notes } = require('../db/db.json');
-const { createNote, findById, updateNote } = require('../lib/notes');
+const { createNote, findById, updateNote, deleteNote } = require('../lib/notes');
 
 jest.mock('fs');
 
@@ -62,4 +62,25 @@ test('checks function updates note data', () => {
 
     expect(result.title).toBe('Updated note');
     expect(result.text).toBe('Updated text');
+    expect(notesList.length).toBe(2);
 });
+
+// test delete method
+test('checks delete function removes one note', () => {
+    const notesList = [
+        {
+            id: "123",
+            title: 'New note',
+            text: 'New note text'
+        },
+        {
+            id: "321",
+            title: 'New note 2',
+            text: 'New note text 2'
+        },
+    ];
+    const oldNotesArrayLength = notesList.length;
+    const result = deleteNote("123", notesList);
+
+    expect(result.length).toBeLessThan(oldNotesArrayLength);
+})
