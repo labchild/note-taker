@@ -1,15 +1,19 @@
 const router = require('express').Router();
 const { notes } = require('../../db/db.json');
-const { createNote } = require('../../lib/notes');
+const { 
+    createNote,
+    findById,
+    updateNote
+} = require('../../lib/notes');
 
 // get all notes
-router.get('/notes', (req, res) => {
+router.get('/', (req, res) => {
     res.json(notes);
 });
 
 // get one note by id
-router.get('/notes/:id', (req, res) => {
-    const result = findById(req.param.id, notes);
+router.get('/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
 
     if (result) {
         res.json(result);
@@ -18,9 +22,10 @@ router.get('/notes/:id', (req, res) => {
     }
 });
 
-router.post('/notes', (req, res) => {
+// create a note
+router.post('/', (req, res) => {
     req.body.id = notes.length.toString();
-
+    
     const result = createNote(req.body, notes);
 
     if (result) {
@@ -29,3 +34,8 @@ router.post('/notes', (req, res) => {
         res.status(404).json({ message: 'Request formatted incorrectly' });
     }
 });
+
+// update an existing note
+
+
+module.exports = router;
