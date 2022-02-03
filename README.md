@@ -27,6 +27,10 @@ You can now visit the page in your web browser at http://localhost:3001. To stop
 
 ## Usage
 To use the live site, click [here](https://nameless-crag-18820.herokuapp.com/) to visit the deployed application.
+![note taker homepage preview](./src/images/note-taker-preview.png)
+
+From click the 'Get Started' button to begin taking notes. You will be brought to the 'Notes' page.
+![note taker notes page preview]()
 
 ## Contributing
 This project uses the following packages:
