@@ -1,16 +1,18 @@
 # Note Taker
+![license](https://img.shields.io/badge/license-MIT-green) ![express version](https://img.shields.io/github/package-json/dependency-version/labchild/note-taker/express) ![issues](https://img.shields.io/github/issues-raw/labchild/note-taker)
 Take notes with express!
-![license](https://img.shields.io/badge/license-MIT-green)
-
-## Description
 
 ### Table of Contents
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Tests](#tests)
 * [Questions & Contact](#questions&contact)
 * [Acknowledgements](#acknowledgements❣️)
+
+## Description
+Note Taker is a simple note taking web application that allows the user to write and save notes to a dataset for future reference. Users can also delete existing notes from the dataset.
 
 ## Installation
 You can access the deployed version of this site [here](https://nameless-crag-18820.herokuapp.com/).
@@ -30,7 +32,12 @@ To use the live site, click [here](https://nameless-crag-18820.herokuapp.com/) t
 ![note taker homepage preview](./src/images/note-taker-preview.png)
 
 From click the 'Get Started' button to begin taking notes. You will be brought to the 'Notes' page.
-![note taker notes page preview]()
+![note taker notes page preview](./src/images/note-taker-notes-review.png)
+
+Click on the 'Add Note' button (plus sign) in the top-right corner of the winow to add a new note. When you're done, click the 'Save' button (floppy disk icon) in the top-right corner of the window.
+![add note preview](./src/images/add-note-preview.png)
+
+To view or delete existing notes, find the title of the note in the list on the left side of the window. Click on the title to display the note and its details. Click the 'Delete' button (red trash can icon) to remove the note from the list.
 
 ## Contributing
 This project uses the following packages:
