@@ -1,8 +1,18 @@
 {
   "notes": [
     {
-      "title": "New note 1",
-      "text": "New note text 1",
+      "title": "Here's another note!",
+      "text": "A bit of note text",
+      "id": "1"
+    },
+    {
+      "title": "yet another note",
+      "text": "more note text",
+      "id": "2"
+    },
+    {
+      "title": "How many more notes?",
+      "text": "some details about notes.",
       "id": "3"
     }
   ]

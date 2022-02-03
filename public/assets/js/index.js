@@ -3,6 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+// let editNoteBtn;
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -10,6 +11,7 @@ if (window.location.pathname === '/notes') {
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
+  // editNoteBtn = document.querySelector('.edit-note');
 }
 
 // Show an element
@@ -49,7 +51,16 @@ const deleteNote = (id) =>
       'Content-Type': 'application/json',
     },
   });
-
+/*
+const editNote = (id, note) =>
+  fetch(`/api/notes/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(note)
+  });
+*/
 const renderActiveNote = () => {
   hide(saveNoteBtn);
 
@@ -58,6 +69,7 @@ const renderActiveNote = () => {
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
+
   } else {
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
@@ -76,6 +88,27 @@ const handleNoteSave = () => {
     renderActiveNote();
   });
 };
+
+/*
+// edit existing note
+const handleEditNote = () => {
+  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+  const updatedNote = {
+    title: noteTitle.value,
+    text: noteText.value,
+    id: noteId
+  };
+
+  editNote(noteId, updatedNote)
+    .then(() => {
+      getAndRenderNotes();
+      renderActiveNote();
+    })
+    .catch(err => {
+      if (err) console.log(err);
+    })
+};
+*/
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
