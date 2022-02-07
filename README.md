@@ -6,6 +6,7 @@ Take notes with express!
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Contributing](#contributing)
 * [License](#license)
 * [Tests](#tests)
 * [Questions & Contact](#questions&contact)
